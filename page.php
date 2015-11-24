@@ -7,6 +7,7 @@
                       
                       private $connection;
                       private $query = $query;
+                      // Defuault Result Limit
                       private $results_per_page = 10;
                       private $current_page = 1;
                       private $total_results = 0;
@@ -64,7 +65,7 @@
 
                     $page = $_GET["page_id"];
 
-                    $obj = new $pagination($conn, $query, $page);
+                    $obj = new $pagination($conn, $query, 15, $page);
 
                     $obj->paginate();
                     
