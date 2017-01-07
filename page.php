@@ -7,7 +7,7 @@
                       
                       private $connection;
                       private $query = $query;
-                      // Defuault Result Limit
+                      // Default Result Limit
                       private $results_per_page = 10;
                       private $current_page = 1;
                       private $total_results = 0;
@@ -39,12 +39,12 @@
 
 		                    if ( $this->current_page <= $this->total_pages ) {
 		 						
-		 						if ($this->current_page = 1)
+		 						if ($this->current_page == 1)
 		 							$back = "";
 		 						else
 		 							$back = "<a href='?page_id=".($page_number-1)."'></a>";
 		 						
-		 						if($this->current_page = $this->total_pages)
+		 						if($this->current_page == $this->total_pages)
 		 							$next = "";
 		                        else
 		                        	$back = '<a href="?page_id='.($page_number+1).'"></a>';
